@@ -89,8 +89,8 @@ public class Register extends JFrame implements ActionListener {
         signupbutton.setAlignmentY(CENTER_ALIGNMENT);
         signupbutton.setBounds(242, 228, 225, 70);
         signupbutton.setBackground(Color.decode("#FFFFFF"));
-        signupbutton.setForeground(Color.decode("#202A44"));
-        signupbutton.setBorder(BorderFactory.createMatteBorder(0, 0, 4, 0, Color.decode("#202A44")));
+        signupbutton.setForeground(Color.decode("#16B13B"));
+        signupbutton.setBorder(BorderFactory.createMatteBorder(0, 0, 4, 0, Color.decode("#16B13B")));
         add(signupbutton);
     }
 
@@ -116,7 +116,7 @@ public class Register extends JFrame implements ActionListener {
         loginbutton.setAlignmentY(CENTER_ALIGNMENT);
         loginbutton.setBounds(8, 228, 225, 70);
         loginbutton.setBackground(Color.decode("#FFFFFF"));
-        loginbutton.setForeground(Color.decode("#202A44"));
+        loginbutton.setForeground(Color.decode("#16B13B"));
         loginbutton.setBorderPainted(false);
         add(loginbutton);
     }

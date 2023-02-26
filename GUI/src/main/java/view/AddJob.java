@@ -18,7 +18,7 @@ public class AddJob extends JFrame implements ActionListener {
     AddJob(){
         uI();
         addJobButton();
-        logoutButton();
+//        logoutButton();
         cancelButton();
         labels();
         jobField();
@@ -35,17 +35,18 @@ public class AddJob extends JFrame implements ActionListener {
         setBackground(Color.decode(("#EBEBEB")));
     }
     void cancelButton(){
-        cancelbutton = new Base.Button( "",18, 10, 10, 50, 40);
-        cancelbutton.setIcon(cancel);
-        cancelbutton.setBackground(Color.WHITE);
+        cancelbutton = new Base.Button( "Back",18, 10, 10, 200, 40);
+        cancelbutton.setText("Back");
+        cancelbutton.setForeground(Color.BLACK);
+        cancelbutton.setBackground(Color.white);
         add(cancelbutton);
     }
-    void logoutButton(){
-        logoutbutton = new Base.Button( "",18, 420, 10, 50, 40);
-        logoutbutton.setIcon(logout);
-        logoutbutton.setBackground(Color.WHITE);
-        add(logoutbutton);
-    }
+//    void logoutButton(){
+//        logoutbutton = new Base.Button( "",18, 420, 10, 50, 40);
+//        logoutbutton.setIcon(logout);
+//        logoutbutton.setBackground(Color.WHITE);
+//        add(logoutbutton);
+//    }
     void addJobButton(){
         addJobbutton = new Base.Button("Insert", 18, 150, 340, 180, 40);
         add(addJobbutton);
@@ -61,18 +62,18 @@ public class AddJob extends JFrame implements ActionListener {
     void handleAction(){
         cancelbutton.addActionListener(this);
         addJobbutton.addActionListener(this);
-        logoutbutton.addActionListener(this);
+//        logoutbutton.addActionListener(this);
     }
     @Override
     public void actionPerformed(ActionEvent e) {
         String jobName=jobfield.getText();
-        if (e.getSource().equals(logoutbutton)) {
-            int reply = JOptionPane.showConfirmDialog(this, "Are you sure you want to logout?", "Logout", JOptionPane.YES_NO_OPTION);
-            if (reply == JOptionPane.YES_OPTION) {
-                new Login().setVisible(true);
-                dispose();
-            }
-        }
+//        if (e.getSource().equals(logoutbutton)) {
+//            int reply = JOptionPane.showConfirmDialog(this, "Are you sure you want to logout?", "Logout", JOptionPane.YES_NO_OPTION);
+//            if (reply == JOptionPane.YES_OPTION) {
+//                new Login().setVisible(true);
+//                dispose();
+//            }
+//        }
         if (e.getSource().equals(cancelbutton)) {
                 int reply = JOptionPane.showConfirmDialog(this, "The job cannot be saved if cancelled.", "Cancel", JOptionPane.YES_NO_OPTION);
                 if (reply == JOptionPane.YES_OPTION) {

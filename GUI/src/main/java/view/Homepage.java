@@ -17,7 +17,7 @@ public class Homepage extends JFrame implements ActionListener {
     private JTable jobTable;
     private DefaultTableModel tableModel;
     private JScrollPane scrollPane;
-    ImageIcon logout = new ImageIcon("Public\\Logoutb.png");
+//    ImageIcon logout = new ImageIcon("Public\\Logoutb.png");
     static JobController jobController= new JobController();
     public static ArrayList<String> jobs=jobController.fetchAllJobs();
     public static String JOB_NAME="";
@@ -55,9 +55,10 @@ public class Homepage extends JFrame implements ActionListener {
         add(scrollPane, BorderLayout.CENTER);
     }
     void logoutButton(){
-        logoutbutton = new Base.Button( "",18, 420, 10, 60, 40);
-        logoutbutton.setIcon(logout);
-        logoutbutton.setBackground(Color.WHITE);
+        logoutbutton = new Base.Button( "Logout",18, 300, 10, 100, 40);
+        logoutbutton.setText("logout");
+//        logoutbutton.setIcon(logout);
+        logoutbutton.setBackground(Color.darkGray);
         add(logoutbutton);
     }
     void label(){

@@ -17,10 +17,15 @@ public class Login extends JFrame implements ActionListener {
     User user;
     UserController userController;
 
+    ImageIcon show = new ImageIcon("Public\\Show.png");
+    ImageIcon hide = new ImageIcon("Public\\Hide.png");
+
     public Login() {
         uI();
+//        banner();// the banner of the login and register page
         signUpButton(); // the button that leads to register page
         logInButton();// the button that leads to login page
+        passwordButton(); // the button for showpassword
         submitButton();// the button that authenticates the user
 
         email();
@@ -41,21 +46,21 @@ public class Login extends JFrame implements ActionListener {
     }
 
     public void email() {
-        emailfield = new Base.TextField("Email", 18, 41, 330, 392, 45);
+        emailfield = new view.Base.TextField("Email", 18, 41, 330, 392, 45);
         add(emailfield);
     }
 
     //  password text filed
     public void password() {
-        passwordfield = new Base.PasswordField("Password", 18, 41, 390, 349, 45, showpasswordbutton);
+        passwordfield = new view.Base().PasswordField("Password", 18, 41, 390, 349, 45, showpasswordbutton);
         add(passwordfield);
     }
 
     // password side button
-//    public void passwordButton() {
-//        showpasswordbutton = new Base.ShowPassword(387, 390, 45, 45);
-//        add(showpasswordbutton);
-//    }
+    public void passwordButton() {
+        showpasswordbutton = new Base.ShowPassword(387, 390, 45, 45);
+        add(showpasswordbutton);
+    }
 
     public void signUpButton() {
         registerbutton = new JButton("Register");
@@ -64,7 +69,7 @@ public class Login extends JFrame implements ActionListener {
         registerbutton.setAlignmentY(CENTER_ALIGNMENT);
         registerbutton.setBounds(242, 228, 225, 70);
         registerbutton.setBackground(Color.decode("#FFFFFF"));
-        registerbutton.setForeground(Color.decode("#343541"));
+        registerbutton.setForeground(Color.decode("#16B13B"));
         registerbutton.setBorderPainted(false);
         add(registerbutton);
     }
@@ -76,8 +81,8 @@ public class Login extends JFrame implements ActionListener {
         loginbutton.setAlignmentY(CENTER_ALIGNMENT);
         loginbutton.setBounds(8, 228, 225, 70);
         loginbutton.setBackground(Color.decode("#FFFFFF"));
-        loginbutton.setForeground(Color.decode("#454B1B"));
-        loginbutton.setBorder(BorderFactory.createMatteBorder(0, 0, 4, 0, Color.decode("#454B1B")));
+        loginbutton.setForeground(Color.decode("#16B13B"));
+        loginbutton.setBorder(BorderFactory.createMatteBorder(0, 0, 4, 0, Color.decode("#16B13B")));
         add(loginbutton);
     }
 
@@ -90,6 +95,7 @@ public class Login extends JFrame implements ActionListener {
     public void handleAction() {
         loginbutton.addActionListener(this);
         registerbutton.addActionListener(this);
+        showpasswordbutton.addActionListener(this);
         submitbutton.addActionListener(this);
     }
 
@@ -124,5 +130,14 @@ public class Login extends JFrame implements ActionListener {
         }
 
 
+        if (e.getSource().equals(showpasswordbutton)) {
+            if (passwordfield.getEchoChar() == (char) 0 && (!String.copyValueOf(passwordfield.getPassword()).equals("Password"))) {
+                showpasswordbutton.setIcon(show);
+                passwordfield.setEchoChar('\u25cf');
+            } else {
+                showpasswordbutton.setIcon(hide);
+                passwordfield.setEchoChar((char) 0);
+            }
+        }
     }
 }

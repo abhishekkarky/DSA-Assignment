@@ -36,23 +36,25 @@ public class AddDependency extends JFrame implements ActionListener {
         setBackground(Color.decode(("#EBEBEB")));
     }
     void cancelButton(){
-        cancelbutton = new Base.Button( "",18, 10, 10, 50, 40);
-        cancelbutton.setIcon(cancel);
+        cancelbutton = new Base.Button( "Back",18, 10, 10, 200, 40);
+        cancelbutton.setText("Back");
+        cancelbutton.setForeground(Color.BLACK);
+//        cancelbutton.setIcon(cancel);
         cancelbutton.setBackground(Color.WHITE);
         add(cancelbutton);
     }
-    void logoutButton(){
-        logoutbutton = new Base.Button( "",18, 420, 10, 50, 40);
-        logoutbutton.setIcon(logout);
-        logoutbutton.setBackground(Color.WHITE);
-        add(logoutbutton);
-    }
+//    void logoutButton(){
+//        logoutbutton = new Base.Button( "",18, 420, 10, 50, 40);
+//        logoutbutton.setIcon(logout);
+//        logoutbutton.setBackground(Color.WHITE);
+//        add(logoutbutton);
+//    }
     void addDependencyButton(){
         adddependencybutton = new Base.Button("Insert", 18, 150, 340, 180, 40);
         add(adddependencybutton);
     }
     void labels() {
-        label= new Base.Label("Dependency Name","Poppins",18,10,160,100,40);
+        label= new Base.Label("Dependency Name","Poppins",18,10,160,200,40);
         add(label);
     }
     void Field(){
@@ -93,6 +95,6 @@ public class AddDependency extends JFrame implements ActionListener {
     }
 
     public static void main(String[] args) {
-        new AddJob().setVisible(true);
+        new AddDependency().setVisible(true);
     }
 }
