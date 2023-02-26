@@ -6,6 +6,27 @@ import java.util.PriorityQueue;
 Question 6
         a)	Implement Huffman encoding and decoding.
 */
+
+//Create a function called "printCode" which takes a root node and string s as input
+//If the current node is a leaf node (i.e. left and right pointers are null and the character is a letter), print the character and its corresponding code (which is the string s passed in)
+//Recursively call printCode for the left and right child nodes, adding "0" to the code string for the left child and "1" for the right child
+//Create a function called "encode" which takes an array of characters and their frequencies as input
+//Create a priority queue of HuffmanNode objects with each character as a leaf node and its frequency as the data
+//While there are at least 2 nodes in the queue, remove the 2 nodes with the lowest frequencies and create a new node with a "-" character and a data value equal to the sum of the removed nodes' data values. Set the removed nodes as the left and right children of the new node
+//Add the new node to the queue
+//Once only one node remains in the queue, it is the root of the Huffman tree
+//Call the printCode function on the root node to print out each character and its corresponding Huffman code
+//Create a function called "decode" which takes the Huffman tree root and a string of Huffman codes as input
+//Initialize an empty array list for characters and another empty array list for their frequencies
+//Traverse the Huffman tree using the provided string of Huffman codes and add each character and its frequency to their respective array lists
+//Print out the characters and their frequencies using the printDecode function
+//Create a custom comparator class called "MyComparator" which compares 2 HuffmanNode objects based on their data values
+//In the main function, define an array of characters and their frequencies
+//Create a new Huffman object and call the encode function with the character and frequency arrays as input. Store the returned root node of the Huffman tree
+//Print out the data value of the root node
+//Define a string of Huffman codes to be decoded
+//Call the decode function with the root node and Huffman code string as input
+//The decoded characters and their frequencies will be printed out
  class Huffman {
      class HuffmanNode{
         int data;

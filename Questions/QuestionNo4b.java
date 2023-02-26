@@ -1,3 +1,10 @@
+//Define a ListNode class with two properties: val (integer value) and next (reference to next node).
+//Define a sortList method that takes a ListNode head as input and returns an integer value.
+//Initialize a count variable to 0 and a current variable to head.
+//Traverse the linked list while the current node's next property is not null.
+//If the current node's value is greater than the next node's value, remove the next node by updating the current node's next property to point to the node after the next node and increment the count variable by 1.
+//If the current node's value is less than or equal to the next node's value, set the current node to be the next node and continue traversing.
+//Return the count variable, which represents the number of steps required to sort the linked list.
 class Question4B {
     static class ListNode {
         int val;

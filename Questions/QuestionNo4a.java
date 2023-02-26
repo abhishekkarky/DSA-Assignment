@@ -3,6 +3,11 @@ Question 4
         a)	Design and Implement LFU caching
 */
 
+//Initialize the capacity, cache, freq, freqKeys, and minFreq variables in the constructor.
+//Implement the get() method to return the value of a key if it exists in the cache, update its frequency, and update the minimum frequency if necessary.
+//Implement the put() method to add a new key-value pair to the cache, update its frequency, and evict the least frequently used key if the cache is full.
+//Implement a main() method to create an instance of the LFUCache class, call the put() and get() methods, and print the results.
+
 import java.util.HashMap;
 import java.util.LinkedHashSet;
 import java.util.Map;

@@ -1,3 +1,12 @@
+//Define a function product(subarray) that takes an input subarray and returns its product.
+//Define a function findminimumdifference(array) that takes an input array and returns the minimum difference between the product of any two subarrays of the input array.
+//Initialize a variable mindiff to the maximum integer value.
+//Iterate over all possible combinations of subarrays of length n/2, where n is the length of the input array.
+//For each combination, split the input array into two subarrays of length n/2.
+//Calculate the product of each subarray using the product() function.
+//Find the absolute difference between the product of the two subarrays.
+//If the difference is less than mindiff, update mindiff to the difference.
+//Return mindiff.
 public class QuestionNo3a {
     public static int product(int[] subaaray){
         if (subaaray.length == 0){

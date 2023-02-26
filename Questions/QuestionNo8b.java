@@ -8,6 +8,15 @@ b)
         and kth missing number is on 6th place of the list i.e. 16
 */
 
+
+//Initialize a list called missingEvens to store the missing even numbers.
+//Initialize two variables, i and j, to the first even number and the index of the first element in the array, respectively.
+//While the size of missingEvens is less than k, do the following:
+//a. If j is less than the length of array a and a[j] is equal to i, increment j.
+//b. Otherwise, add i to the missingEvens list.
+//c. Increment i by 2.
+//Return the kth element in the missingEvens list.
+
 import java.util.ArrayList;
 import java.util.List;
 

@@ -1,3 +1,18 @@
+//Create an array list of integer arrays "heights".
+//Call the method "transformBuilding" and pass in the "buildings" and "heights" array lists.
+//Sort the "heights" array list using a custom comparator that compares the first element in each array, and if they are the same, compare the second element instead.
+//Create a priority queue of integers "pq" and seed it with 0.
+//Create an integer variable "prevMax" and set it to 0.
+//Loop through each array "height" in the "heights" array list.
+//If the second element in the "height" array is negative, add its absolute value to the priority queue "pq".
+//Otherwise, remove the second element from the priority queue.
+//Get the maximum value in the priority queue "pq" and assign it to the variable "CurrentMax".
+//If "CurrentMax" is not equal to "prevMax", create a new array list "subResult", add the first element from the "height" array and "CurrentMax" to it, and add the "subResult" to the "res" list.
+//Set "prevMax" to "CurrentMax".
+//Return the "res" list.
+//Create a method named "transformBuilding" that takes in a 2D integer array "buildings" and an array list of integer arrays "heights".
+//Loop through each array "building" in the "buildings" array.
+//Add a new array to the "heights" array list with the first element from the "building" array, the negative value of the third element from the "building" array, and repeat this process but with the second element from the "building" array and the third element from the "building" array instead.
 import java.util.*;
 
 class QuestionNo5a {

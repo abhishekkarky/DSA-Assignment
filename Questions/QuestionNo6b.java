@@ -20,6 +20,10 @@ SIX +SEVEN + SEVEN = TWENTY
 */
 
 
+//The isSolvable method takes an array of strings words and a string result as input. It first creates a set of all unique characters in words and result, and initializes an array charCount to store the sum of each character's values across all words and the result.
+//Then, it uses backtracking to assign a digit to each character in charSet such that the sum of the values of each word equals the value of the result. The backtracking function backtracking uses a used array to keep track of which digits have been used, and a nonLeadingZero array to ensure that no character is assigned a leading zero. It returns true if a solution is found and false otherwise.
+//Finally, in the main method, an instance of the WordandTarget class is created, and isSolvable is called with a test input. The output of isSolvable is printed to the console.
+
 import java.util.HashSet;
 import java.util.Set;
 

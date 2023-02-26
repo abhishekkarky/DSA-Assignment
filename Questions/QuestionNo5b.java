@@ -14,6 +14,19 @@ Question 5.b)
         batteries with a capacity of 60 miles; and after travelling 50 miles, at position 60 we change batteries
         with a capacity of 40 miles; and ultimately, we may arrive at our destination.
 */
+
+
+//Initialize count to 0.
+//Initialize currentMiles to startChargeCapacity.
+//Create two ArrayLists, distances and capacities, to store the distance to each service center and the capacity of each service center, respectively.
+//Loop through each service center in the serviceCenters array:
+//a. Add the distance of the service center to the distances ArrayList.
+//b. Add the capacity of the service center to the capacities ArrayList.
+//Loop through each distance in the distances ArrayList:
+//a. If the current distance is greater than currentMiles, set currentMiles to the capacity of the previous service center and increment count.
+//If currentMiles is less than targetMiles, increment count.
+//Return count.
+
 public class Question5b {
     public int numBatteryReplacements(int[][] serviceCenters, int targetMiles, int startChargeCapacity) {
         int count = 0;
